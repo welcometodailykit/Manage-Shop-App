@@ -1,0 +1,11 @@
+{
+  "name": "cra-template-dailyos",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Praveen Bisht",
+  "license": "MIT",
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
