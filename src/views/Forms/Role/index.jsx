@@ -12,11 +12,10 @@ const RoleForm = () => {
    const { state } = React.useContext(Context)
    React.useEffect(() => {
       const tab = doesTabExists(state.tabs, `/roles/${params.name}`)
-      if (tab.hasOwnProperty('path')) {
+      if (Object.prototype.hasOwnProperty.call(tab, 'path')) {
          return setData(tab)
-      } else {
-         history.push('/roles')
       }
+      return history.push('/roles')
    }, [state.tabs, params.name, history])
    return (
       <div>

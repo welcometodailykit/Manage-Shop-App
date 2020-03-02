@@ -12,11 +12,10 @@ const UserFomr = () => {
    const { state } = React.useContext(Context)
    React.useEffect(() => {
       const tab = doesTabExists(state.tabs, `/users/${params.name}`)
-      if (tab.hasOwnProperty('path')) {
+      if (Object.prototype.hasOwnProperty.call(tab, 'path')) {
          return setData(tab)
-      } else {
-         history.push('/users')
       }
+      return history.push('/users')
    }, [state.tabs, params.name, history])
    return (
       <div>

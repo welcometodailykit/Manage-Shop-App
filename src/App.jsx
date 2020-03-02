@@ -2,7 +2,7 @@ import React from 'react'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { Context, state as initialState, reducers } from './store/tabs'
+import { Context, initialState, reducers } from './store/tabs'
 
 // Sections
 import Header from './sections/Header'

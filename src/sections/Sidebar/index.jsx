@@ -16,7 +16,7 @@ const Sidebar = ({ visible, toggleSidebar }) => {
    const history = useHistory()
    const { dispatch } = React.useContext(Context)
    const addTab = (title, path) => {
-      toggleSidebar(visible => !visible)
+      toggleSidebar(!visible)
       dispatch({
          type: 'ADD_TAB',
          payload: { title, path, history },

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Context = React.createContext()
 
-const state = {
+const initialState = {
    tabs: [],
 }
 
@@ -14,15 +14,11 @@ const reducers = (state, { type, payload }) => {
          if (tabExists) {
             payload.history.push(payload.path)
             return state
-         } else {
-            payload.history.push(payload.path)
-            return {
-               ...state,
-               tabs: [
-                  ...state.tabs,
-                  { title: payload.title, path: payload.path },
-               ],
-            }
+         }
+         payload.history.push(payload.path)
+         return {
+            ...state,
+            tabs: [...state.tabs, { title: payload.title, path: payload.path }],
          }
       }
       // Delete Tab
@@ -56,4 +52,4 @@ const reducers = (state, { type, payload }) => {
    }
 }
 
-export { Context, state, reducers }
+export { Context, initialState, reducers }
