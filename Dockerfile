@@ -25,4 +25,4 @@ WORKDIR /usr/src/app/server/
 COPY server/package.json ./
 RUN yarn
 COPY server/ ./
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]

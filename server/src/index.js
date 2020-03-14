@@ -6,7 +6,7 @@ const schema = require('./schema')
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, '/../client/build')))
+app.use(express.static(path.join(__dirname, '/../../client/build')))
 
 const server = new ApolloServer({ schema })
 
