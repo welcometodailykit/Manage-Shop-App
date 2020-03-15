@@ -9,14 +9,12 @@ module.exports = gql`
       categories: [Category!]!
       active: Boolean!
    }
-
    type Category {
       id: ID!
       name: Label!
       products: [Product]!
       subcategories: [SubCategory]!
    }
-
    type SubCategory {
       id: ID!
       name: Label!
@@ -24,5 +22,13 @@ module.exports = gql`
    }
    type Label {
       name: String!
+   }
+   input CreateCollectionInput {
+      name: String!
+   }
+   input UpdateCollectionInput {
+      priority: Int
+      categories: [Category!]!
+      active: Boolean!
    }
 `
